@@ -10,6 +10,7 @@
 void swap(int arr[], int head, int tail)
 {
 	int tmp;
+
 	tmp = arr[head];
 	arr[head] = arr[tail];
 	arr[tail] = tmp;
@@ -23,14 +24,15 @@ void swap(int arr[], int head, int tail)
  */
 void bubble_sort(int *array, size_t size)
 {
-	int range, n = size;
+	int range, head, n = size, x = size;
 
-	while(n > 1)
+	while (n > 1)
 	{
 		range = 0;
-		for (int head = 0; head < size - 1; head++)
+		for (head = 0; head < x - 1; head++)
 		{
 			int tail = head + 1;
+
 			if (array[head] > array[tail])
 			{
 				swap(array, head, tail);
